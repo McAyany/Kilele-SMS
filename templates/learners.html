@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Learners</title>
+</head>
+<body>
+    <h2>List of Learners</h2>
+    <table border="1">
+        <tr>
+            <th>Admission No</th><th>Assessment</th><th>Name</th><th>Gender</th><th>Class</th>
+        </tr>
+        {% for learner in learners %}
+        <tr>
+            <td>{{ learner.admission_number }}</td>
+            <td>{{ learner.assessment_number }}</td>
+            <td>{{ learner.first_name }} {{ learner.last_name }}</td>
+            <td>{{ learner.gender }}</td>
+            <td>{{ learner.class_name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Registration</a>
+</body>
+</html>
